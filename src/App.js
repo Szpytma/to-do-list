@@ -1,9 +1,13 @@
+import Footer from "./components/Footer.jsx";
+import Header from "./components/Header";
+import Todo from "./components/Todo.jsx";
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Hello</h1>
-      </header>
+      <Header />
+      <Todo />
+      <Footer />
     </div>
   );
 }
