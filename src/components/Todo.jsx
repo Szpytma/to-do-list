@@ -4,36 +4,49 @@ import "./ToDo.css";
 function Todo() {
   const [todo, setTodo] = useState([]);
   const [item, setItem] = useState("");
+  const [warning, setWarning] = useState("");
   const handleSubmit = (event) => {
     event.preventDefault();
     const newItem = { id: todo.length + 1, task: item };
-    setTodo([...todo, newItem]);
-    setItem("");
+    if (item === "") {
+      setWarning("Input cannot be empty!");
+    } else {
+      setTodo([...todo, newItem]);
+      setItem("");
+      setWarning("");
+    }
   };
   const handleDelete = (event) => {
     event.preventDefault();
     setTodo([]);
     setItem("");
+    setWarning("");
   };
 
   return (
     <form>
-      <input
-        value={item}
-        onChange={(event) => setItem(event.target.value)}
-      ></input>
+      <p>{warning}</p>
+      <div className="input-section">
+        <input
+          type="text"
+          value={item}
+          onChange={(event) => setItem(event.target.value)}
+          required
+        ></input>
 
-      <button type="submit" onClick={handleSubmit}>
-        Add Item
-      </button>
+        <button type="submit" onClick={handleSubmit}>
+          Add Item
+        </button>
+      </div>
       <ol>
         {todo.map((task) => (
           <li key={task.id}>
-            {task.task} <input type="checkbox" key={task.id}></input>
+            <input type="checkbox" key={task.id} id="task"></input>
+            <label htmlFor="task">{task.task}</label>
           </li>
         ))}
       </ol>
-      <button type="submit" onClick={handleDelete}>
+      <button className="delete" type="submit" onClick={handleDelete}>
         Delete List
       </button>
     </form>
