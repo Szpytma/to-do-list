@@ -1,3 +1,5 @@
+import "../app.css";
+
 function Header() {
   return (
     <header>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./ToDo.css";
 
 function Todo() {
   const [todo, setTodo] = useState([]);
@@ -9,15 +10,22 @@ function Todo() {
     setTodo([...todo, newItem]);
     setItem("");
   };
+  const handleDelete = (event) => {
+    event.preventDefault();
+    setTodo([]);
+    setItem("");
+  };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form>
       <input
         value={item}
         onChange={(event) => setItem(event.target.value)}
       ></input>
 
-      <button type="submit">Add Item</button>
+      <button type="submit" onClick={handleSubmit}>
+        Add Item
+      </button>
       <ol>
         {todo.map((task) => (
           <li key={task.id}>
@@ -25,6 +33,9 @@ function Todo() {
           </li>
         ))}
       </ol>
+      <button type="submit" onClick={handleDelete}>
+        Delete List
+      </button>
     </form>
   );
 }
