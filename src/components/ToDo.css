@@ -2,6 +2,8 @@ body {
   background-image: url(https://img.freepik.com/free-vector/topographic-contour-lines-map-seamless-pattern_1284-52862.jpg?w=826&t=st=1680789649~exp=1680790249~hmac=fca819ee293d45ce3f9192f665b0843f6a27a67ec9a8878ec1e30e4584e4381d);
   font-family: "Bebas Neue", cursive;
   text-align: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 form {
@@ -32,7 +34,6 @@ ol {
 
 li {
   text-align: right;
-  /* padding-left: 5px; */
   margin: 0 20% 0 20%;
   display: flex;
   flex-direction: row-reverse;
@@ -76,7 +77,4 @@ button:hover {
 .delete:hover {
   color: black;
   background-color: #ffd60a;
-}
-
-footer {
 }
