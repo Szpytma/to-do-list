@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+To-do list - an app where you can add items to the to-do list by typing them in, and clicking a submit button.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Planning
 
-## Available Scripts
+- [ ] Outline the functionality of your app
+- [ ] Sketch the UI of your app
+- [ ] Break up the UI of your app into components
+- [ ] Name your components
+- [ ] Draw out the component hierarchy
+- [ ] Decide on what data your application will need to hold in state - this should be minimal with no duplication of data
+- [ ] For each piece of state determine which components will need access to that state - either to read or update it
+- [ ] Place the state in a component that is high enough on the tree for all required components to be able to access it. A good general rule is `As low as possible, but as high as necessary`
+- [ ] Repeat this for each piece of state
 
-In the project directory, you can run:
+## Setup
 
-### `npm start`
+- [ ] Create your app directory (e.g. with create-react-app)
+- [ ] Run your app
+- [ ] Create a static render of blank components as per your hierarchy
+- [ ] Check everything is hooked up and the component tree is rendered
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Build components
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [ ] Work on each component in turn. Generally starting high up the tree and working your way down works well.
+- [ ] Add the required state to your components and render that state correctly. (You can change the initial state manually to check it renders the way you want for now)
+- [ ] Once the state is rendered correctly add any functionality that will set that state.
+- [ ] Repeat this for all the functionality of a component before moving on to the next.
+- [ ] Once all the functionality of a component is complete you can style the component at this point or leave all your styling until the end.
+- [ ] Repeat this process until you have a complete app.
